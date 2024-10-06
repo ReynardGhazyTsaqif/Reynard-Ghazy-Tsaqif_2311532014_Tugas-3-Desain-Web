@@ -1,7 +1,6 @@
-const CACHE_NAME = 'rynnify-cache-v1';
-const ASSETS_TO_CACHE = [
-    '/',
-  '/index.html',
+const cache_name = 'v1';
+const cache_assets = [
+    '/index.html',
   '/about.html',
   '/contact.html',
   
@@ -21,39 +20,44 @@ const ASSETS_TO_CACHE = [
   '/pic/thefatrat.jpg'
 ];
 
-
-// Install Service Worker dan cache aset statis
+// Install event
 self.addEventListener('install', (event) => {
+    console.log('Service Worker: Installed');
     event.waitUntil(
-      caches.open(CACHE_NAME)
-        .then((cache) => {
-          console.log('Caching assets');
-          console.log('Service Worker: Caching Files');
-            return cache.addAll(ASSETS_TO_CACHE);
-        })
-        .catch((error) => {
-          console.error('Failed to cache assets:', error);
-        })
+        caches.open(cache_name)
+            .then((cache) => {
+                console.log('Service Worker: Caching Files');
+                return cache.addAll(cache_assets);
+            })
+            .catch((error) => {
+                console.error('Error caching assets:', error);
+            }) 
     );
-  });
-  
-  // Aktifkan Service Worker dan hapus cache lama
-  self.addEventListener('activate', (event) => {
+});
+
+// Activate event
+self.addEventListener('activate', (event) => {
+    console.log('Service Worker: Activated');
     event.waitUntil(
-      caches.keys().then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cache) => {
-            if (cache !== CACHE_NAME) {
-              console.log('Deleting old cache:', cache);
-              return caches.delete(cache);
+        caches.keys().then(
+            (cacheNames) => {
+                return Promise.all(
+                    cacheNames.map(
+                        (cache) => {
+                            if (cache !== cache_name) {
+                                console.log('Service Worker: Clearing Old Cache');
+                                return caches.delete(cache);
+                            }
+                        }
+                    )
+                );
             }
-          })
-        );
-      })
+        )
     );
-  });
-  
-  self.addEventListener('fetch', (event) => {
+});
+
+// Fetch event
+self.addEventListener('fetch', (event) => {
     console.log('Service Worker: Fetching');
     event.respondWith(
         caches.match(event.request).then(
@@ -68,4 +72,3 @@ self.addEventListener('install', (event) => {
         )
     );
 });
-  
