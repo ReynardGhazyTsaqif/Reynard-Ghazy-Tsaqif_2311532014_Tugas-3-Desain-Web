@@ -1,0 +1,356 @@
+body{
+    font-family: 'Quicksand','inter';
+    padding: 0;
+    margin: 0;
+    background-image: url("Pic/bacindex.jpg");
+    background-size: cover;
+}
+* {
+    box-sizing: border-box;
+}
+.atas {
+    background-color: white; 
+    color: black;
+    padding: 15px; 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.atas nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: sticky;
+}
+
+.atas nav span {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.atas nav ul {
+    list-style-type: none; 
+    display: flex; 
+}
+
+.atas nav ul li {
+    margin-right: 20px; 
+}
+
+.atas nav ul li a {
+    color: black;
+    text-decoration: none; 
+    transition: color 0.5s; 
+}
+
+.atas nav ul li a:hover {
+    color: #FFEB3B; 
+    font-weight: bold;
+}
+footer {
+    background-color: black; 
+    color: white; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+    flex-wrap: wrap; 
+}
+
+footer .jelas {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+    
+}
+footer .jelas .judul {
+    font-size:  2.25rem;
+    font-weight: bold;
+    
+    padding-bottom: 10px;
+}
+footer .jelas .isi {  
+    font-size: large;
+    padding-bottom: 10px;
+}
+
+footer .tengah {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+footer .tengah .website{
+    font-size: large;
+    font-weight: bold; 
+}
+
+footer .tengah ul {
+    
+    list-style-type: none; 
+    padding: 0;
+}
+
+footer .tengah ul li {
+    font-size: large;
+    margin-top: 4px; 
+}
+
+footer .tengah ul li a {
+    
+    color: #FFFFFF; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+footer .tengah ul li a:hover {
+    color: #FFEB3B; 
+}
+
+footer .ujung {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    
+}
+footer .ujung .sosial{
+    font-size: large;
+    font-weight: bold; 
+}
+
+footer .ujung ul {
+    
+    list-style-type: none; 
+    padding: 0;
+}
+
+footer .ujung ul li {
+    font-size: large;
+    margin-top: 4px; 
+}
+
+footer .ujung ul li a {
+    color: #FFFFFF; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+footer .ujung ul li a:hover {
+    color: #FFEB3B; 
+}
+
+.separator {
+    text-align: center;
+    margin: 50px 0;
+    color: white;
+}
+
+.separator h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.separator p {
+    font-size: 1.2rem;
+    color: #FFEB3B;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.banner {
+    position: relative; 
+    max-width: 600px; 
+    margin: 80px auto; 
+    overflow: hidden; 
+    border-radius: 15px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.banner-images {
+    width: 100%;
+    display: flex; 
+    transition: transform 0.5s ease; 
+}
+
+.banner-images img {
+    flex: 0 0 100%; 
+    height: 300px; 
+    object-fit: cover; 
+}
+
+
+button {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent button background */
+    border: none;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#about{
+    background-image: url("Pic/bg.avif");
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    color: white;
+    padding-bottom: 50px;
+}
+
+#about svg {
+    width: 50px; 
+    height: 50px; 
+}
+
+.latest-music, .testimonials {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    padding-top: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: black;
+}
+
+.latest-music h2, .testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.music-testimonials-container {
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Space items evenly with space between */
+    margin: 40px auto; /* Center the container */
+    padding: 20px;
+}
+
+.latest-music, .testimonials {
+    text-align: center;
+    padding: 20px;
+    padding-top: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: black;
+    flex: 0 0 48%; /* Set to 48% for each section to leave space for margin */
+    margin: 0 1%; /* Add small margin on the left and right */
+}
+
+.latest-music h2, .testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.latest-music ul {
+    list-style-type: none;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: inherit; /* Menggunakan warna teks dari elemen induk */
+    padding: 0;
+    
+}
+
+.latest-music li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    
+}
+.latest-music li a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: inherit; /* Menggunakan warna teks dari elemen induk */
+}
+
+
+.latest-music li:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Existing testimonials styles remain the same */
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center; /* Align items horizontally */
+    gap: 20px; /* Space between cards */
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker card background */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%; /* Set width to 100% for card */
+    max-width: 300px; /* Limit the maximum width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.testimonial-card blockquote {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.testimonial-card cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #FFEB3B; /* Highlight the user name */
+}
+.testimonial-card-tengah {
+    background-color: rgba(255, 255, 255, 0.2); /* Same background as other cards */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%; /* Set width to 100% for the centered card */
+    max-width: 300px; /* Limit the maximum width */
+    margin: 20px auto; /* Center the card with margin */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center; 
+    transition: transform 0.3s ease;
+}
+
+
+.testimonial-card-tengah:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.testimonial-card-tengah blockquote {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.testimonial-card-tengah cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #FFEB3B; /* Highlight the user name */
+}

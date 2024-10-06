@@ -1,0 +1,298 @@
+
+body{
+    font-family: 'Quicksand','inter';
+    padding: 0;
+    margin: 0;
+    background-image: url("Pic/bacindex.jpg");
+    
+    
+}
+* {
+    box-sizing: border-box;
+}
+.atas {
+    background-color: white; 
+    color: black;
+    padding: 15px; 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.atas nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: sticky;
+}
+
+.atas nav span {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.atas nav ul {
+    list-style-type: none; 
+    display: flex; 
+}
+
+.atas nav ul li {
+    margin-right: 20px; 
+}
+
+.atas nav ul li a {
+    color: black;
+    text-decoration: none; 
+    transition: color 0.5s; 
+}
+
+.atas nav ul li a:hover {
+    color: #FFEB3B; 
+    font-weight: bold;
+}
+footer {
+    background-color: black; 
+    color: white; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+    flex-wrap: wrap; 
+}
+
+footer .jelas {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+    
+}
+footer .jelas .judul {
+    font-size:  2.25rem;
+    font-weight: bold;
+    
+    padding-bottom: 10px;
+}
+footer .jelas .isi {  
+    font-size: large;
+    padding-bottom: 10px;
+}
+
+footer .tengah {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+footer .tengah .website{
+    font-size: large;
+    font-weight: bold; 
+}
+
+footer .tengah ul {
+    
+    list-style-type: none; 
+    padding: 0;
+}
+
+footer .tengah ul li {
+    font-size: large;
+    margin-top: 4px; 
+}
+
+footer .tengah ul li a {
+    
+    color: #FFFFFF; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+footer .tengah ul li a:hover {
+    color: #FFEB3B; 
+}
+
+footer .ujung {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    
+}
+footer .ujung .sosial{
+    font-size: large;
+    font-weight: bold; 
+}
+
+footer .ujung ul {
+    
+    list-style-type: none; 
+    padding: 0;
+}
+
+footer .ujung ul li {
+    font-size: large;
+    margin-top: 4px; 
+}
+
+footer .ujung ul li a {
+    color: #FFFFFF; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+footer .ujung ul li a:hover {
+    color: #FFEB3B; 
+}
+
+main .index{
+    flex: 1;
+    align-items: center;
+    display: flex;
+    
+    padding-top: 120px;
+    padding-left: 120px;
+}
+
+main .index .description{
+    flex: 1 1;
+}
+
+main .index .description p{
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+main .index .description button{
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+    background-color: black;
+    font-family: 'Quicksand' sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+main .index .description button:hover{
+    border: 3px solid black;
+    background-color: transparent;
+    color: black;
+}
+
+main .index .images{
+    flex: 1;
+    display: flexs;
+}
+
+main .index .images img{
+    width: 300px;
+    min-width: 250px;
+    margin: auto;
+    border-radius: 50%;
+    margin-left: 100px;
+}
+
+.card {
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: space-between; 
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2)
+    
+}
+
+.pwa {
+    margin: 50px;
+   
+}
+
+.features {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-cards .card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 20px;
+    width: 30%;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.fitur {
+    font-size: 2rem;
+    margin-bottom: 10px; 
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: whitesmoke; 
+    border-radius: 10px;
+    border: 2px solid #000; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.fitur:hover {
+    background-color: #000; 
+    color: #FFFFFF; 
+}
+
+#installButton{
+    width: 100%;
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+    background-color: black;
+    font-family: 'Quicksand' sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+#installButton:hover{
+    border: 3px solid black;
+    background-color: transparent;
+    color: black;
+}

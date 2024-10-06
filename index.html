@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme_color" content="#ff6600">
+    <title>Rynnify - Streaming Musik Tanpa Batas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js')
+              .then(registration => {
+                console.log('Service Worker registered with scope:', registration.scope);
+              }, err => {
+                console.log('Service Worker registration failed:', err);
+              });
+          });
+        }
+    </script>
+    <header class="atas">
+        <nav>
+            <span class="logo">
+                Rynnify
+            </span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <div class="index">
+                <div class="description">
+                    <h1>Menemukan Musik, Menemukan Dunia</h1>
+                    <p>Kami yakin bahwa musik adalah jembatan yang menghubungkan emosi dan kreativitas di era digital. Rynnify hadir sebagai platform streaming musik yang membantu pengguna menemukan dan menikmati musik dari seluruh dunia.</p>
+                    <button>Lebih Lanjut</button>
+                    
+                </div>
+                <div class="images">
+                    <img src="Pic/logo.png" alt="Rynnify Logo">
+                </div>
+            </div>
+        </div>
+
+        <!-- Fitur Utama -->
+        <section class="features">
+            <h2 class="fitur">Fitur Unggulan Kami</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Streaming Tanpa Iklan</h3>
+                    <p>Dengan langganan premium, nikmati pengalaman mendengarkan musik tanpa gangguan iklan.</p>
+                </div>
+                <div class="card">
+                    <h3>Mode Offline</h3>
+                    <p>Dengarkan musik favorit Anda kapan saja, di mana saja, bahkan tanpa koneksi internet.</p>
+                </div>
+                <div class="card">
+                    <h3>Playlist Kurasi</h3>
+                    <p>Kami membuat playlist khusus yang sesuai dengan selera musik Anda.</p>
+                </div>
+            </div>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Dapat diinstal pada perangkat mobile dan desktop</h3>
+                    <p>Aplikasi ini dapat diinstal pada perangkat mobile dan desktop untuk memberikan pengalaman layaknya aplikasi native tanpa perlu membuka browser.</p>
+                </div>
+                <div class="card">
+                    <h3>Berfungsi secara offline dengan konten yang di-cache</h3>
+                    <p>Tetap dapat digunakan saat offline dengan menyimpan konten yang telah diakses sebelumnya melalui cache.</p>
+                </div>
+                <div class="card">
+                    <h3>Memberikan pengalaman layaknya aplikasi native</h3>
+                    <p>Memberikan pengalaman yang mirip dengan aplikasi native, termasuk kecepatan responsif dan tampilan yang intuitif, meskipun diakses melalui browser.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="pwa card">
+            <p>Rynnify kini telah dilengkapi dengan teknologi Progressive Web App (PWA), memberikan pengalaman streaming musik yang lebih lancar dan dapat diakses secara offline. Dengan PWA, pengguna dapat menikmati musik kapan saja dan di mana saja, bahkan saat tidak terhubung ke internet.</p>         
+            <button id="installButton" style="display: none;">Install App</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="jelas">
+            <span class="judul">Rynnify</span>
+            <span class="isi">Kami menghadirkan berbagai pilihan musik menarik dari  <br>seluruh dunia melalui Rynnify</span>
+            <span>&copy; 2024 Rynnify</span>
+        </div>
+
+        <div class="tengah">
+            <span class="website">Website</span>
+            <ul class="tengah1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="ujung">
+            <span class="sosial">Follow Kami</span>
+            <ul class="social-icons">
+                <li><a href="https://www.instagram.com/reynard_ghazy?igsh=bmQybGxvZHRqYW44" target="_blank">Instagram</a></li>
+                <li><a href="https://x.com/GhazyReynard?t=O-T19fjIQud5WhagUyX-gQ&s=09" target="_blank">X</a></li>
+                <li><a href="https://www.linkedin.com/in/reynard-ghazy-tsaqif-8457a7287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    
+
+    <script>
+        let deferredPrompt;
+        const addBtn = document.getElementById('installButton');
+        addBtn.style.display = 'none';
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        addBtn.style.display = 'block';
+
+        addBtn.addEventListener('click', () => {
+            addBtn.style.display = 'none';
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+            } else {
+                console.log('User dismissed the install prompt');
+            }
+            deferredPrompt = null;
+            });
+        });
+        });
+    </script>
+      
+</body>
+</html>

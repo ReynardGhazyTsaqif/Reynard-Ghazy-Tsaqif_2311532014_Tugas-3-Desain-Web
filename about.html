@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme_color" content="#ff6600">
+    <title>Rynnify</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="about.css">
+
+
+    
+</head>
+<body>
+    <header class="atas">
+        <nav>
+            <span>
+                Rynnify
+            </span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div id="about">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" >
+                <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+                <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+            </svg> 
+            <h1>Here</h1>
+            <span>Rynnify, the best place to discover and enjoy music according to your taste</span>
+        </div> 
+        <div class="separator">
+            <h2>Discover Our Latest Music Collections</h2>
+            <p>Explore a variety of music that suits your taste, curated just for you!</p>
+        </div>
+        <!-- Banner Gambar -->
+        <div class="banner">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="banner-images">
+                <img src="pic/ncs.jpeg" alt="Image 1">
+                <img src="pic/ratherbe.jpeg" alt="Image 2">
+                <img src="pic/thefatrat.jpg" alt="Image 3">
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>  
+         
+         <div class="music-testimonials-container">
+            <div class="latest-music">
+                <h2>Latest Music</h2>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=TicGJQqrq2M">The Drum - Alan Walker</a></li>
+
+                    <li><a href="https://www.youtube.com/watch?v=dAmaaW4d5n0">Luxury - Azelia Banks</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=3vjkh-acmTE">Washing Machine Heart - Mitski</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=YQHsXMglC9A">Hello - Adele</a></li>
+                </ul>
+            </div>
+        
+            <section class="testimonials">
+                <h2>What Our Users Say</h2>
+                <div class="testimonial-cards">
+                    <div class="testimonial-card">
+                        <blockquote>"Rynnify has completely changed the way I enjoy music!"</blockquote>
+                        <cite>- User A</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>"The selection is amazing, and the interface is so user-friendly."</blockquote>
+                        <cite>- User B</cite>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card-tengah">
+                    <blockquote>"I love the recommendations! They always hit the mark."</blockquote>
+                    <cite>- User C</cite>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+
+    <footer id="Contact">
+        <div class="jelas">
+            <span class="judul">Rynnify</span>
+            <span class="isi">Kami menghadirkan berbagai pilihan musik <br>menarik dari seluruh dunia melalui Rynnify</span>
+            <span>&copy; Rynnify</span>
+        </div>
+
+        <div class="tengah">
+            <span class="website">Website</span>
+            <ul class="tengah1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="ujung">
+            <span class="sosial">Social Media Creator</span>
+            <ul>
+                <li><a href="https://www.instagram.com/reynard_ghazy?igsh=bmQybGxvZHRqYW44" target="_blank" >Instagram</a></li>
+                <li><a href="https://x.com/GhazyReynard?t=O-T19fjIQud5WhagUyX-gQ&s=09" target="_blank" >X</a></li>
+                <li><a href="https://www.linkedin.com/in/reynard-ghazy-tsaqif-8457a7287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedln</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="about.js"></script>
+ 
+</body>
+</html>

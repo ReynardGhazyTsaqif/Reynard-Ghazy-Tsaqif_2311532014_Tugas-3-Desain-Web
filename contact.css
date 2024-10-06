@@ -1,0 +1,241 @@
+body {
+    font-family: 'Quicksand', 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.atas {
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: black;
+    padding: 15px; 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.atas:hover {
+    background-color: white; 
+}
+
+.atas nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: sticky;
+}
+
+.atas nav span {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.atas nav ul {
+    list-style-type: none; 
+    display: flex; 
+}
+
+.atas nav ul li {
+    margin-right: 20px; 
+}
+
+.atas nav ul li a {
+    color: black;
+    text-decoration: none; 
+    transition: color 0.5s; 
+}
+
+.atas nav ul li a:hover {
+    color: #FFEB3B; 
+    font-weight: bold;
+}
+
+#hero {
+    background: url("pic/bacindex.jpg") no-repeat center center/cover; 
+    color: black;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer {
+    background-color: black; 
+    color: white; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+footer .jelas {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+}
+
+footer .jelas .judul {
+    font-size: 2.25rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+footer .jelas .isi {  
+    font-size: large;
+    padding-bottom: 10px;
+}
+
+footer .tengah {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .tengah .website{
+    font-size: large;
+    font-weight: bold; 
+}
+
+footer .tengah ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+footer .tengah ul li {
+    font-size: large;
+    margin-top: 4px; 
+}
+
+footer .tengah ul li a {
+    color: #FFFFFF; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+footer .tengah ul li a:hover {
+    color: #FFEB3B; 
+}
+
+footer .ujung {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .ujung .sosial{
+    font-size: large;
+    font-weight: bold; 
+}
+
+footer .ujung ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+footer .ujung ul li {
+    font-size: large;
+    margin-top: 4px; 
+}
+
+footer .ujung ul li a {
+    color: #FFFFFF; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+footer .ujung ul li a:hover {
+    color: #FFEB3B; 
+}
+
+main {
+    padding: 20px; /* Jarak dari tepi */
+    padding-top: 120px;
+}
+
+#badan {
+    display: flex;
+    gap: 20px;
+}
+
+#google-map {
+    flex: 1; 
+    max-width: 100%; 
+    overflow: hidden; 
+    border-radius: 8px; /* Tambahkan radius untuk sudut */
+}
+
+#google-map iframe {
+    width: 100%; 
+    height: 500px; 
+    border: none; /* Hilangkan border */
+}
+
+.form {
+    flex: 1; 
+    max-width: 100%; 
+    padding: 20px;
+    background: #ffffff; /* Warna latar belakang form */
+    border-radius: 8px; /* Radius sudut */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+}
+
+.form-control {
+    width: 100%; 
+    padding: 0.5rem; 
+    margin: 0.5rem 0; 
+    border: 1px solid #ced4da; 
+    border-radius: 0.25rem; 
+}
+
+::placeholder {
+    font-family: 'Quicksand', 'Inter', sans-serif;
+    font-size: large;
+}
+
+textarea.form-control {
+    resize: vertical; 
+}
+
+.btn {
+    background-color: black; 
+    color: #fff; 
+    border: none; 
+    padding: 8px 16px; /* Simplifikasi padding */
+    border-radius: 999px; 
+    cursor: pointer; 
+    margin-block-start: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.15s ease-in; 
+}
+
+.btn:hover {
+    background-color: white; 
+    color: black; 
+    border: 3px solid black;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    #badan {
+        flex-direction: column;
+    }
+    footer {
+        flex-direction: column;
+        align-items: flex-start; /* Agar footer teratur */
+    }
+    footer .jelas, footer .tengah, footer .ujung {
+        width: 100%; /* Buat footer menjadi lebar penuh pada layar kecil */
+    }
+}

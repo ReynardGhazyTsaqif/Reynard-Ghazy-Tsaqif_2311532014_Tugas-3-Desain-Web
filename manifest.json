@@ -1,0 +1,21 @@
+{
+    "name": "Rynnify",
+    "short_name": "Rynn",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#ff5733",
+    "icons": [
+      {
+        "src": "/pic/logo.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/pic/logo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

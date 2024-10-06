@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme_color" content="#ff6600">
+    <title>Rynnify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header class="atas">
+        <nav>
+            <span>Rynnify</span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Selamat Datang di Rynnify!</h1>
+            <p>Musik terbaik dari seluruh dunia, semua ada di sini.</p>
+        </section>
+
+        <div id="badan">
+            <div id="google-map">
+                <iframe
+                    frameborder="0"
+                    src="https://www.google.com/maps/embed/v1/place?q=padang,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                ></iframe>
+            </div>    
+
+            <div class="form">
+                <h2>Kontak Kami</h2>
+                <form action="confirmation.html">
+                    <input type="text" class="form-control" name="name" placeholder="Name" required>
+                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                    
+                    <select class="form-control" name="category" required>
+                        <option value="" disabled selected>Category</option>
+                        <option value="Question">Pertanyaan</option>
+                        <option value="Suggestion">Saran</option>
+                    </select>
+                    
+                    <textarea class="form-control" rows="8" name="message" placeholder="Your message" required></textarea>
+                    
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="reply" value="yes" required> Ingin menerima balasan
+                        </label>
+                        <label>
+                            <input type="radio" name="reply" value="no"> Tidak ingin menerima balasan
+                        </label>
+                    </div>
+                
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="Contact">
+        <div class="jelas">
+            <span class="judul">Rynnify</span>
+            <span class="isi">Kami menghadirkan berbagai pilihan musik <br>menarik dari seluruh dunia melalui Rynnify</span>
+            <span>&copy; Rynnify</span>
+        </div>
+
+        <div class="tengah">
+            <span class="website">Website</span>
+            <ul class="tengah1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="ujung">
+            <span class="sosial">Social Media Creator</span>
+            <ul>
+                <li><a href="https://www.instagram.com/reynard_ghazy?igsh=bmQybGxvZHRqYW44" target="_blank">Instagram</a></li>
+                <li><a href="https://x.com/GhazyReynard?t=O-T19fjIQud5WhagUyX-gQ&s=09" target="_blank">X</a></li>
+                <li><a href="https://www.linkedin.com/in/reynard-ghazy-tsaqif-8457a7287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedln</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
