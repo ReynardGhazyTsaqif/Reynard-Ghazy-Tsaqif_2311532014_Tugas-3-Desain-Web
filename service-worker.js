@@ -1,23 +1,23 @@
 const cache_name = 'v1';
 const cache_assets = [
-    '/index.html',
-    '/about.html',
-    '/contact.html',
+    'index.html',
+    'about.html',
+    'contact.html',
     
-    '/offline.html',
-    '/index.css',
-    '/about.css',
-    '/contact.css',
+    'offline.html',
+    'index.css',
+    'about.css',
+    'contact.css',
     
-    '/offline.css',
-    '/about.js',
-    '/pic/bacindex.jpg',
-    '/pic/bg.avif',
-    '/pic/huruf.jpg',
-    '/pic/logo.png',
-    '/pic/ncs.jpeg',
-    '/pic/ratherbe.jpeg',
-    '/pic/thefatrat.jpg'
+    'offline.css',
+    'about.js',
+    'bacindex.jpg',
+    'bg.avif',
+    'huruf.jpg',
+    'logo.png',
+    'ncs.jpeg',
+    'ratherbe.jpeg',
+    'thefatrat.jpg'
 ];
 
 // Install event

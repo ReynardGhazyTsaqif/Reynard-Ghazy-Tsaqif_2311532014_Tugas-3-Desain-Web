@@ -7,12 +7,12 @@
     "theme_color": "#ff5733",
     "icons": [
       {
-        "src": "/pic/huruf.jpeg",
+        "src": "huruf.jpeg",
         "sizes": "192x192",
         "type": "image/jpeg"
       },
       {
-        "src": "/pic/huruf.jpeg",
+        "src": "huruf.jpeg",
         "sizes": "512x512",
         "type": "image/jpeg"
       }
