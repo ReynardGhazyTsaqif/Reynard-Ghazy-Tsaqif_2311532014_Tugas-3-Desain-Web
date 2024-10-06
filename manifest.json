@@ -2,20 +2,20 @@
     "name": "Rynnify",
     "short_name": "Rynn",
     "start_url": "index.html",
-    "display":"standalone",
-    "background_color": "#778899",
-    "theme_color": "#000000",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#ff5733",
     "icons": [
-        {
-            "src": "logo.png",
-            "type": "image/png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "logo.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        }
-        
+      {
+        "src": "/pic/huruf.jpeg",
+        "sizes": "192x192",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "/pic/huruf.jpeg",
+        "sizes": "512x512",
+        "type": "image/jpeg"
+      }
     ]
   }
+  
