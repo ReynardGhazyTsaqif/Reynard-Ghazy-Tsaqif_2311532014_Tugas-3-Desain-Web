@@ -28,13 +28,8 @@ self.addEventListener('install', (event) => {
       caches.open(CACHE_NAME)
         .then((cache) => {
           console.log('Caching assets');
-          return Promise.all(
-            ASSETS_TO_CACHE.map(asset => {
-              return cache.add(asset).catch(err => {
-                console.error('Failed to cache asset:', asset, err);
-              });
-            })
-          );
+          console.log('Service Worker: Caching Files');
+            return cache.addAll(cache_assets);
         })
         .catch((error) => {
           console.error('Failed to cache assets:', error);
@@ -59,20 +54,18 @@ self.addEventListener('install', (event) => {
   });
   
   self.addEventListener('fetch', (event) => {
-    console.log('Service Worker: Fetching', event.request.url);
+    console.log('Service Worker: Fetching');
     event.respondWith(
-        caches.match(event.request)
-            .then((response) => {
-                // Jika aset ditemukan di cache, kembalikan
+        caches.match(event.request).then(
+            (response) => {
                 if (response) {
                     return response;
                 }
-                // Jika tidak ada di cache, coba ambil dari jaringan
-                return fetch(event.request).catch(() => {
-                    // Jika gagal mengambil dari jaringan, kembalikan halaman offline
-                    return caches.match('/offline.html');
-                });
-            })
+                return fetch(event.request).catch(
+                    () => caches.match('offline.html')
+                );
+            }
+        )
     );
 });
   
