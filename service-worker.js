@@ -29,7 +29,7 @@ self.addEventListener('install', (event) => {
         .then((cache) => {
           console.log('Caching assets');
           console.log('Service Worker: Caching Files');
-            return cache.addAll(cache_assets);
+            return cache.addAll(ASSETS_TO_CACHE);
         })
         .catch((error) => {
           console.error('Failed to cache assets:', error);
